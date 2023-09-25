@@ -14,7 +14,7 @@
 
 传统的经典区块链架构可以分为四个层次：**数据可用层（DA）、共识层、结算层和执行层**，如下图所示。
 
-![image](https://intranetproxy.alipay.com/skylark/lark/0/2023/png/100656720/1695260024432-a333e03d-b8fc-4645-bb22-7d091848c067.png)<center><i>https://volt.capital/blog/the-merge</i></center>
+![image](https://uploads-ssl.webflow.com/628cfc99b32e9128c13d1f3a/62e46b9d66dca616478401d3_rRQGUQYy6f4QhX-BbEnP3W16egd7vrHOOXz3C_2MM5sJtjJwse968u6g5rIocTuF1Z7h29CSuILBayf2JmmL8i2yajYyfCIYQq9C3hphu_rQypKcAaMXPJRZqtnxuuksw8PAp8AkrZ4iVAYYEBu3GwM.png)<center><i>https://volt.capital/blog/the-merge</i></center>
 
 一般来说，数据可用层存储交易元信息，共识层为交易定序，结算层存储State结果，执行层进行智能合约执行。当然有一些项目方基于自身的考量，在这4层的细节方面会有一定出入。
 
@@ -52,7 +52,7 @@ P.S. 波场（Tron）在这方面比较特殊，其生态系统主要以转账�
 
 接下来，让我们简单介绍一下Rollup基本架构。
 
-![image](https://intranetproxy.alipay.com/skylark/lark/0/2023/png/100656720/1695260052138-1b8a78a0-4ba5-441c-91ea-e042f38f4a1d.png)
+![image](https://img.foresightnews.pro/202206/842-1655173858721.png?x-oss-process=style/scale70)
 <center><i>https://foresightnews.pro/article/detail/6690</i></center>
 
 简单来说，每个Layer2 Rollup可以被视为一个区块链。如上图所示，一般我们可以通过将Layer 1的计算逻辑转移到链下，将Layer 2压缩后的交易放入Layer 1的一个合约中，从而实现计算扩容的目标。因此，以太坊的Rollup实际上是在这四个层次中的**执行层**进行扩容。其他的**数据可用层、共识层**和**结算层**当然也可以扩容，只是生态不够繁荣，暂时未形成规模，我们会在下文介绍。
@@ -63,12 +63,12 @@ P.S. 波场（Tron）在这方面比较特殊，其生态系统主要以转账�
 
 当然目前可以初步认为，有了Rollup之后，以太坊的性能从原来的十几TPS提升到了几百TPS。要进一步提升性能，可能需要通过以太坊的DankSharding和EIP4844等协议升级来实现。
 
-![image](https://intranetproxy.alipay.com/skylark/lark/0/2023/png/100656720/1695260168038-7e5aa895-0aa0-4e48-80cd-5b5684a91684.png)
+![image](https://stack.optimism.io/assets/img/superchain-diag.96e9f28f.png)
 <center><i>https://stack.optimism.io/docs/understand/explainer/</i></center>
 
 ## 四、从数据可用层看模块化存储层
 
-![image](https://intranetproxy.alipay.com/skylark/lark/0/2023/png/100656720/1695260173752-fc7782d6-6c5a-474a-a61b-1afa2db20e1c.png)
+![image](https://blog.celestia.org/content/images/2023/06/Screenshot-2023-06-01-at-8.54.05-AM.png)
 <center><i>https://blog.celestia.org/modular-data-availability-for-the-op-stack/</i></center>
 
 刚才我们从计算层的角度看到了Rollup，这是率先突破的模块化生态。而除了计算层之外，许多数据可用层也在进行模块化的突破，其中Celestia、Avail、EthStorage都是其中的典型代表。
@@ -77,7 +77,7 @@ P.S. 波场（Tron）在这方面比较特殊，其生态系统主要以转账�
 
 数据可用层想解决的仍是以太坊高昂的数据存储费用以及主网较低的性能问题，但是随着以太坊EIP-4844的协议升级，该问题可能会被极大的弱化。
 
-![image](https://intranetproxy.alipay.com/skylark/lark/0/2023/png/100656720/1695260188049-425d56da-acf4-42b0-acf5-3b30bae92652.png?x-oss-process=image%2Fresize%2Cw_920%2Climit_0)
+![image](https://twitter.com/nake13/status/1552869399585255424/photo/1)
 <center><i>https://twitter.com/hotbreaker3/status/1552905578749386752</i></center>
 
 它带来的影响是什么呢？就是以太坊将拥有一个单独的Blob交易。这个交易可以很大，比如128KB，一个区块中可以容纳4或8笔交易，并且存储费用更为便宜，从而提升整体Rollup的性能、降低单笔交易的费用。
@@ -114,7 +114,7 @@ P.S. 波场（Tron）在这方面比较特殊，其生态系统主要以转账�
 
 上一节我们聊到计算层和数据可用层的模块化，现在再来讲讲共识层。
 
-![image](https://intranetproxy.alipay.com/skylark/lark/0/2023/png/100656720/1695260258548-42bd56dd-9903-4acc-98b2-283e677999fa.png?x-oss-process=image%2Fresize%2Cw_920%2Climit_0)
+![image](https://coincu.com/wp-content/uploads/2023/08/Screenshot-2023-08-06-at-10.09.59.png)
 <center><i>https://coincu.com/208537-espresso-review/</i></center>
 
 共识层主要目的是为了L2的交易定序，需要注意的是，L2的定序结果不一定是最终结果，我们的定序最终结果仍以以太坊合约为主。
@@ -148,7 +148,7 @@ Sequencer最主要的作用之一是对L2交易定序、打包、提交（到L1�
 
 ### 6.2 DA & Restaking
 
-![image](https://intranetproxy.alipay.com/skylark/lark/0/2023/png/100656720/1695260335264-19c48813-829e-4355-99cd-f3c958ac2821.png?x-oss-process=image%2Fresize%2Cw_920%2Climit_0)
+![image](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*LhJuQhQcpkaoKpYHXXQXkA.png)
 <center><i>https://medium.com/iosg-ventures/eigenlayer-bringing-ethereum-level-trust-to-middleware-c5c426bc8c33</i></center>
 
 常规意义上的DA会提供低价、高效的数据存储方式，甚至提供可编程的能力（比如ETHStorage）。但为了让安全性更高、生态激励模型更健康，一些DA解决方会考虑用利益“软性捆绑”以太坊验证者节点，将以太坊生态的安全性与DA生态之间形成一个弱绑定关系。
@@ -166,7 +166,7 @@ ZK Rollup是一个挑战期更短，未来更可期的Rollup解决方案，但�
 
 ### 6.4 AppChain & L3
 
-![image](https://intranetproxy.alipay.com/skylark/lark/0/2023/png/100656720/1695260368999-6a4cafba-0465-46ee-a3a6-37c56ec257db.png)
+![image](https://era.zksync.io/docs/assets/hyperbridges-2fe1f60d.png)
 <center><i>https://era.zksync.io/docs/reference/concepts/hyperscaling.html</i></center>
 
 笔者认为，提到Rollup，必须要提到AppChain甚至L3的概念，原因有三：
