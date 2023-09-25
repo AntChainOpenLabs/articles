@@ -77,7 +77,7 @@ P.S. 波场（Tron）在这方面比较特殊，其生态系统主要以转账�
 
 数据可用层想解决的仍是以太坊高昂的数据存储费用以及主网较低的性能问题，但是随着以太坊EIP-4844的协议升级，该问题可能会被极大的弱化。
 
-![image](https://twitter.com/nake13/status/1552869399585255424/photo/1)
+![image](https://pbs.twimg.com/media/FYzlvAcakAA3c3w?format=jpg&name=large)
 <center><i>https://twitter.com/hotbreaker3/status/1552905578749386752</i></center>
 
 它带来的影响是什么呢？就是以太坊将拥有一个单独的Blob交易。这个交易可以很大，比如128KB，一个区块中可以容纳4或8笔交易，并且存储费用更为便宜，从而提升整体Rollup的性能、降低单笔交易的费用。
