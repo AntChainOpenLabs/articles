@@ -30,7 +30,7 @@
 
 ### 2.1 从TVL看Rollup现状
 
-![image](https://intranetproxy.alipay.com/skylark/lark/0/2023/png/100656720/1695260034912-0a810003-1705-4304-89a1-bf229d25b066.png)
+![image](https://github.com/AntChainOpenLabs/articles/blob/main/_resources/%E4%BB%8E%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9C%8BWeb3%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD02.png)
 <center><i>https://defillama.com/chains</i></center>
 
 先看一组数据，从上图可以看出，目前Layer1和Layer2的 TVL 占比中，除了以太坊占据最大的57%之外，其次是Binance Smart Chain（BSC）链。再然后便是Arbitrum、Optimism、Base、Mixin等Rollup链。
@@ -41,7 +41,7 @@ P.S. 波场（Tron）在这方面比较特殊，其生态系统主要以转账�
 
 ### 2.2 成本降低但还没那么低
 
-![image](https://intranetproxy.alipay.com/skylark/lark/0/2023/png/100656720/1695260041112-8269ffb2-15fa-4890-b969-9b93cce168f6.png?x-oss-process=image%2Fresize%2Cw_676%2Climit_0)
+![image](https://github.com/AntChainOpenLabs/articles/blob/main/_resources/%E4%BB%8E%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9C%8BWeb3%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD03.jpg)
 <center><i>https://www.binance.com/en/blog/ecosystem/binance-research-halfyear-report-highlights-h1-2023-8155260287042551298</i></center>
 
 从成本的角度来看，以太坊的成本约为4.21美元，而Optimism的成本为0.1美元，Arbitrum的成本为0.18美元。Rollup的成本虽然已经到了以太坊的几十分之一，但是由于需要将DA存储在以太坊的合约中，所以存储费用仍是大头，普遍超过70%的费用占比。
@@ -89,8 +89,8 @@ P.S. 波场（Tron）在这方面比较特殊，其生态系统主要以转账�
 2、EIP4844仍是一个过渡方案，相比于DankSharding的最终方案来看，自建DA的链可以提供成本更低，容量更高的基础设施。
 
 <figure class="half">
-    <img src="https://intranetproxy.alipay.com/skylark/lark/0/2023/png/100656720/1695260198843-6fd57d6b-85cd-459d-a33c-124bfb583afe.png"width="240">
-    <img src="https://intranetproxy.alipay.com/skylark/lark/0/2023/png/100656720/1695260202040-52153155-4965-4b8f-8d81-31bd867500ed.png"width="240">
+    <img src="https://github.com/AntChainOpenLabs/articles/blob/main/_resources/%E4%BB%8E%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9C%8BWeb3%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD08.jpg"width="240">
+    <img src="https://github.com/AntChainOpenLabs/articles/blob/main/_resources/%E4%BB%8E%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9C%8BWeb3%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD09.jpg"width="240">
 </figure>
 <center><i>https://eth-store.w3eth.io/</i></center>
 
@@ -101,7 +101,7 @@ P.S. 波场（Tron）在这方面比较特殊，其生态系统主要以转账�
 
 另一个解决思路是Off-Chain DA，即不将交易原文放到以太坊主网里，退化成Validium解决方案。不过从社区的TVL数据来看，对该模式貌似并不是很买单。
 
-![image](https://intranetproxy.alipay.com/skylark/lark/0/2023/png/100656720/1695260230488-215531d3-0892-4aba-a433-b9ad29679753.png)
+![image](https://github.com/AntChainOpenLabs/articles/blob/main/_resources/%E4%BB%8E%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9C%8BWeb3%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD10.jpg)
 <center><i>https://defillama.com/chains</i></center>
 
 以Arbitrum为例，Arbitrum是最大的OP Rollup解决方案，占据了整个Rollup生态系统中54%的TVL，但其Off-Chain DA的占比仅为0.2%。
@@ -131,8 +131,9 @@ P.S. 波场（Tron）在这方面比较特殊，其生态系统主要以转账�
 
 ### 6.1 共享Sequencer & MEV
 
-![image](https://intranetproxy.alipay.com/skylark/lark/0/2023/png/100656720/1695260285668-a055f6b5-b755-43c6-b5f4-0100f77d9d69.png)
-<center><i>https://hackmd.io/@EspressoSystems/EspressoSequencer</i></center>
+![image](https://github.com/AntChainOpenLabs/articles/blob/main/_resources/%E4%BB%8E%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9C%8BWeb3%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD12.jpg)
+<center><i>https://hackmd.io/@EspressoSystems/EspressoSequencer</i></center>    
+
 <center>Espresso Sequencer Network</center>
 
 Sequencer最主要的作用之一是对L2交易定序、打包、提交（到L1），虽然最终的定序结果以L1 Smart Contract为准，但是大多数时候，Sequencer的排序结果与最终结果相对一致。
@@ -141,7 +142,7 @@ Sequencer最主要的作用之一是对L2交易定序、打包、提交（到L1�
 
 不过对于这些提供Sequence能力的基础设施提供方而言，如果有权利对多个Rollup链定序，在MEV上会有更多收益。
 
-![image](https://intranetproxy.alipay.com/skylark/lark/0/2023/png/100656720/1695260317164-569be87f-ca7a-44e6-82a4-972d5b8d6a1b.png)
+![image](https://github.com/AntChainOpenLabs/articles/blob/main/_resources/%E4%BB%8E%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9C%8BWeb3%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD13.jpg)
 <center><i>https://writings.flashbots.net/the-future-of-mev-is-suave/</i></center>
 
 以FlashBots为例，其发起的SUAVE链期望可以对包括以太坊、ZK Rollup、OP Rollup等所有以太坊生态进行排序，以Intent的方式完成MEV的竞拍。又由于其一旦持有多个链的定序权，甚至可以实现“类跨链MEV”的效果，以获取比单条链更高的收益。
@@ -159,7 +160,7 @@ Sequencer最主要的作用之一是对L2交易定序、打包、提交（到L1�
 
 ### 6.3 计算加速平台
 
-![image](https://intranetproxy.alipay.com/skylark/lark/0/2023/png/100656720/1695260351965-5b8de243-b985-4a7c-a2e2-2715efbfb2fc.png?x-oss-process=image%2Fresize%2Cw_920%2Climit_0)
+![image](https://github.com/AntChainOpenLabs/articles/blob/main/_resources/%E4%BB%8E%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9C%8BWeb3%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD14.jpg)
 <center><i>https://docs.opside.network/zk-raas</i></center>
 
 ZK Rollup是一个挑战期更短，未来更可期的Rollup解决方案，但是其要求项目方具有更多的计算资源以及更专业的加速设备和算法实现。所以一些硬件加速的平台想到提供共享的硬件和ZKP生成能力，以一种PoW的模型提供ZKP加速能力。虽然在当前的ZK Rollup生态中，该模式还未完全得到接受，但是从StarkNet的共享Prover以及ZKSync 推出的ZK Stack的趋势来看，未来这不失为一种良性“共享”经济。
