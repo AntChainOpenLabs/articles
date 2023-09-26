@@ -41,16 +41,11 @@ Attack transaction:
 
 ### Timeline of The Attack
 
-![image](https://intranetproxy.alipay.com/skylark/lark/0/2023/png/100656720/1695630894906-4276e40e-8580-48f7-8003-cb5fec7ca6b7.png?x-oss-process=image%2Fresize%2Cw_1500%2Climit_0)
-
-
-
-
-
+![image](https://github.com/AntChainOpenLabs/articles/blob/main/_resources/Linear%20Finance%20%E6%94%BB%E5%87%BB%E4%BA%8B%E4%BB%B6%E5%88%86%E6%9E%9001.jpg)
 
 1. On September 7th, the original admin 0x5C9d6a of Linear Finance's access control contract invoked the ```SetAdmin``` function of the access control contract 0x50bde2, transferring the admin role to the new admin address 0xc1A4aC ([detailed transaction](https://bscscan.com/tx/0xd985f533b0393abe672facaa2e64a16df12dd2e829d93795e1905d94c1395cae)). The admin of the access control contract has the authority to call the ```SetIssueAssetRole``` function of the contract, granting the specified address the ```ISSUE_ASSET``` role, thereby enabling them to mint tokens.
 
-   ![image](https://intranetproxy.alipay.com/skylark/lark/0/2023/tif/26056616/1695369260780-081355c0-a407-4aa4-b1ce-d86d85c5f807.tif?x-oss-process=image%2Fformat%2Cpng%2Fresize%2Cw_1386%2Climit_0)
+   ![image](https://github.com/AntChainOpenLabs/articles/blob/main/_resources/Linear%20Finance%20%E6%94%BB%E5%87%BB%E4%BA%8B%E4%BB%B6%E5%88%86%E6%9E%9002.jpg)
 
 2. On September 15th, the creator of the attack contract, 0xAC70Eb, deployed the attack contract 0x58a278 ([detailed transaction](https://bscscan.com/tx/0xcc5d837340b71bef4197631dde40a53aa5026df677f49651e5708b0584a12e4f)).
 
@@ -63,9 +58,9 @@ By disassembling and examining the code of the attack contract
 
     We can see that the attacker invoked the ```mint``` function of the lAAVE token contract within the attack contract. The lAAVE token contract verified if the caller has the ```ISSUE_ASSET``` role. Since the attack contract has already been granted the ```ISSUE_ASSET``` role in the 3rd step, the attacker passed the verification and minted a large amount of lAAVE tokens ([detailed transaction](https://bscscan.com/tx/0xb9eac27439da28edad2560c81b6ddb331b33861a78a508ea6e7479d963fe280e)).
 
-   ![image](https://intranetproxy.alipay.com/skylark/lark/0/2023/tif/26056616/1695368623638-5884dfc2-2d95-44e7-b04e-cfa8a64c8cc8.tif?x-oss-process=image%2Fformat%2Cpng%2Fresize%2Cw_1500%2Climit_0)<center><i>mintToken function of the attack contract</i></center>
+   ![image](https://github.com/AntChainOpenLabs/articles/blob/main/_resources/Linear%20Finance%20%E6%94%BB%E5%87%BB%E4%BA%8B%E4%BB%B6%E5%88%86%E6%9E%9003.jpg)<center><i>mintToken function of the attack contract</i></center>
 
-   ![image](https://intranetproxy.alipay.com/skylark/lark/0/2023/tif/26056616/1695368750360-8b44c932-3955-445f-b7fa-bbcd5da2ccf5.tif?x-oss-process=image%2Fformat%2Cpng%2Fresize%2Cw_1500%2Climit_0)
+   ![image](https://github.com/AntChainOpenLabs/articles/blob/main/_resources/Linear%20Finance%20%E6%94%BB%E5%87%BB%E4%BA%8B%E4%BB%B6%E5%88%86%E6%9E%9004.jpg)
    <center><i>mint function of lAAVE</i></center>
 
 ## Conclusion
